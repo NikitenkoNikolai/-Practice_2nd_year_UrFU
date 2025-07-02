@@ -166,6 +166,7 @@ for epoch in range(1, EPOCHS+1):
         break
     print(model.linear.weight.data, model.linear.bias.data)
 ```
+# Вывод программы
 ```python
 tensor([[-4.8982]]) tensor([9.9774])
 tensor([[-4.9291]]) tensor([10.0438])
@@ -418,7 +419,7 @@ for epoch in range(1, EPOCHS+1):
 print(f"Epoch {epoch} | Loss: {avg_train_loss:.4f} | "
               f"Acc: {acc:.4f}, Prec: {prec:.4f}, Rec: {rec:.4f}, F1: {f1:.4f}, AUC: {auc:.4f}")
 ```
-
+# Вывод программы
 ```python
 2 классы
 C:\Users\user\AppData\Local\Temp\ipykernel_12296\3883148379.py:90: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
@@ -682,6 +683,7 @@ train_clf, val_clf = random_split(clf_dataset, [train_size_clf, val_size_clf])
 train_loader_clf = DataLoader(train_clf, batch_size=32, shuffle=True)
 val_loader_clf = DataLoader(val_clf, batch_size=32)
 ```
+# Вывод программы
 ```python
 Warning: Looks like you're using an outdated `kagglehub` version (installed: 0.3.10), please consider upgrading to the latest version (0.3.12).
 C:\Users\user\AppData\Local\Temp\ipykernel_5672\886287871.py:20: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.
@@ -780,6 +782,7 @@ for epoch in range(1, EPOCHS+1):
         break
     # print(model.linear.weight.data, model.linear.bias.data)
 ```
+# Вывод программы
 ```python
 Epoch: 10	 loss:1.9074078928555633e+24
 Epoch: 20	 loss:inf
@@ -787,6 +790,8 @@ Epoch: 30	 loss:inf
 Epoch: 40	 loss:nan
 Early stopping на эпохе - 40
 ```
+
+
 ```python
 #Сделаю только для бинарной классификации, сложно как то для 1.5 часа решения домашки
 def accuracy(y_pred, y_true): #вынес в отдельную функцию
@@ -975,6 +980,7 @@ for epoch in range(1, EPOCHS+1):
 print(f"Epoch {epoch} | Loss: {avg_train_loss:.4f} | "
               f"Acc: {acc:.4f}, Prec: {prec:.4f}, Rec: {rec:.4f}, F1: {f1:.4f}, AUC: {auc:.4f}")
 ```
+# Вывод программы
 ```python
 2 классы
 C:\Users\user\AppData\Local\Temp\ipykernel_5672\1616586711.py:83: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
@@ -1430,6 +1436,8 @@ print(batch_clf_df)
 print("\nClassification Optimizer Results:")
 print(opt_clf_df)
 ```
+# Вывод программы
+```python
 Running regression experiments...
 
 Running classification experiments...
@@ -1496,6 +1504,7 @@ Classification Optimizer Results:
 0      0.791393     100  
 1      0.827851      36  
 2      0.829496      28  
+```
 
 # Интерпретация результатов
 Learning rate:
@@ -1521,6 +1530,7 @@ SGD прост, но может требовать тонкой настройк
 Adam более адаптивен, но может хуже обобщаться
 
 RMSprop - компромисс между SGD и Adam
+
 
 # Комментарии
 Я где-то по середине 2-го задания стал намного меньше коментариев писать, заранее извините, у меня вся работ + оформление ReadME.md заняло очень много времени. 
