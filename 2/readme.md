@@ -166,6 +166,7 @@ for epoch in range(1, EPOCHS+1):
         break
     print(model.linear.weight.data, model.linear.bias.data)
 ```
+```python
 tensor([[-4.8982]]) tensor([9.9774])
 tensor([[-4.9291]]) tensor([10.0438])
 tensor([[-4.9449]]) tensor([10.0008])
@@ -210,7 +211,7 @@ tensor([[-4.9614]]) tensor([10.0098])
 tensor([[-4.9248]]) tensor([10.0592])
 Epoch: 40	 loss:0.03698375774547458
 Early stopping на эпохе - 40
-
+```
 # №1.2 LogisticRegression
 ```python
 import torch
@@ -417,6 +418,8 @@ for epoch in range(1, EPOCHS+1):
 print(f"Epoch {epoch} | Loss: {avg_train_loss:.4f} | "
               f"Acc: {acc:.4f}, Prec: {prec:.4f}, Rec: {rec:.4f}, F1: {f1:.4f}, AUC: {auc:.4f}")
 ```
+
+```python
 2 классы
 C:\Users\user\AppData\Local\Temp\ipykernel_12296\3883148379.py:90: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
   print_confusion_matrix(torch.tensor(all_probs), torch.tensor(all_true))
@@ -541,7 +544,7 @@ Recall   : 0.9722
 F1 Score : 0.9524
 Epoch: 100	 loss:619.0000157296746	accuracy: 0.7217
 Epoch 100 | Loss: 0.3381 | Acc: 0.9386, Prec: 0.9333, Rec: 0.9722, F1: 0.9524, AUC: 0.9289
-
+```
 
 
 
@@ -679,10 +682,11 @@ train_clf, val_clf = random_split(clf_dataset, [train_size_clf, val_size_clf])
 train_loader_clf = DataLoader(train_clf, batch_size=32, shuffle=True)
 val_loader_clf = DataLoader(val_clf, batch_size=32)
 ```
+```python
 Warning: Looks like you're using an outdated `kagglehub` version (installed: 0.3.10), please consider upgrading to the latest version (0.3.12).
 C:\Users\user\AppData\Local\Temp\ipykernel_5672\886287871.py:20: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.
   self.data = pd.read_csv(file_path, sep=sep)
-
+```
 ```python
 EPOCHS = 100
 
@@ -776,11 +780,13 @@ for epoch in range(1, EPOCHS+1):
         break
     # print(model.linear.weight.data, model.linear.bias.data)
 ```
+```python
 Epoch: 10	 loss:1.9074078928555633e+24
 Epoch: 20	 loss:inf
 Epoch: 30	 loss:inf
 Epoch: 40	 loss:nan
 Early stopping на эпохе - 40
+```
 ```python
 #Сделаю только для бинарной классификации, сложно как то для 1.5 часа решения домашки
 def accuracy(y_pred, y_true): #вынес в отдельную функцию
@@ -969,6 +975,7 @@ for epoch in range(1, EPOCHS+1):
 print(f"Epoch {epoch} | Loss: {avg_train_loss:.4f} | "
               f"Acc: {acc:.4f}, Prec: {prec:.4f}, Rec: {rec:.4f}, F1: {f1:.4f}, AUC: {auc:.4f}")
 ```
+```python
 2 классы
 C:\Users\user\AppData\Local\Temp\ipykernel_5672\1616586711.py:83: UserWarning: To copy construct from a tensor, it is recommended to use sourceTensor.detach().clone() or sourceTensor.detach().clone().requires_grad_(True), rather than torch.tensor(sourceTensor).
   print_confusion_matrix(torch.tensor(all_probs), torch.tensor(all_true))
@@ -1094,7 +1101,7 @@ F1 Score : 0.6070
 Epoch: 100	 loss:0.25843607551521725	accuracy: 0.9139
 Epoch 100 | Loss: nan | Acc: 0.4358, Prec: 0.4358, Rec: 1.0000, F1: 0.6070, AUC: 0.8247
 
-
+```
 
 # 3.1 Исследование гиперпараметров
 ```python
