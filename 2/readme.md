@@ -689,6 +689,7 @@ Warning: Looks like you're using an outdated `kagglehub` version (installed: 0.3
 C:\Users\user\AppData\Local\Temp\ipykernel_5672\886287871.py:20: ParserWarning: Falling back to the 'python' engine because the 'c' engine does not support sep=None with delim_whitespace=False; you can avoid this warning by specifying engine='python'.
   self.data = pd.read_csv(file_path, sep=sep)
 ```
+# Обучение Линейной регрессии 
 ```python
 EPOCHS = 100
 
@@ -790,7 +791,7 @@ Epoch: 30	 loss:inf
 Epoch: 40	 loss:nan
 Early stopping на эпохе - 40
 ```
-
+# Добавление функций по высчитыванию параметров
 
 ```python
 #Сделаю только для бинарной классификации, сложно как то для 1.5 часа решения домашки
@@ -890,6 +891,7 @@ def print_confusion_matrix(y_pred, y_true):
     print(f"Recall   : {recall:.4f}")
     print(f"F1 Score : {f1:.4f}")
 ```
+# Обучение логистической регрессии
 ```python
 
 EPOCHS = 100
